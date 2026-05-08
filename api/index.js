@@ -43,7 +43,7 @@ const subscriberSchema = new mongoose.Schema({
 });
 
 // 防止模型重复编译
-const Subscriber = mongoose.models.StarVoyageSubscriber || mongoose.model('StarVoyageSubscriber', subscriberSchema, 'star_voyage_subscribers');
+const Subscriber = mongoose.models.AscensionMatchSubscriber || mongoose.model('AscensionMatchSubscriber', subscriberSchema, 'ascension_match_subscribers');
 
 // 中间件
 app.use(cors());

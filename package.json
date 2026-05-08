@@ -1,7 +1,7 @@
 {
-  "name": "star-voyage-landing",
+  "name": "ascension-match-landing",
   "version": "1.0.0",
-  "description": "星环远征官网后端服务",
+  "description": "飞升匹配中官网后端服务",
   "scripts": {
     "dev": "node api/index.js"
   },
