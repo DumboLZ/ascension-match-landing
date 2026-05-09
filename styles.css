@@ -196,7 +196,7 @@ ul {
 /* 英雄区域 (Hero) */
 .hero {
     height: 100vh;
-    background-image: url('assets/images/hero-bg.jpg');
+    background-image: url('assets/images/hero-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
