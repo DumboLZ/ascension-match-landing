@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementById('page-loader');
+
+    function loadImage(src) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = resolve;
+            img.onerror = resolve;
+            img.src = src;
+        });
+    }
+
+    function showPage() {
+        document.body.classList.remove('is-loading');
+        if (loader) {
+            loader.classList.add('hidden');
+            loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+        }
+    }
+
+    const readyTimeout = new Promise((resolve) => setTimeout(resolve, 5000));
+    Promise.race([
+        Promise.all([
+            loadImage('assets/images/hero-bg.png'),
+            loadImage('assets/images/logo.png')
+        ]),
+        readyTimeout
+    ]).then(showPage);
+
     // 弹窗逻辑
     // 预约表单提交逻辑
     const form = document.querySelector('.subscribe-form');

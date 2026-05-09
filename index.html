@@ -16,7 +16,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body class="is-loading">
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite">
+        <div class="loader-panel">
+            <img src="assets/images/logo.png" alt="飞升匹配中 Logo" class="loader-logo">
+            <div class="loader-spinner" aria-hidden="true"></div>
+            <p>加载中...</p>
+        </div>
+    </div>
+
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
