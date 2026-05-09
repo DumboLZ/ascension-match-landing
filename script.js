@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await response.json();
 
                 if (data.success) {
-                    alert('预约成功！感谢您的关注。');
+                    alert('预约成功！开测消息会第一时间通知您。');
                     emailInput.value = '';
                     closeModal();
                 } else {
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('网络错误，请稍后重试，或确保后台服务已启动。');
+                alert('暂时未能提交预约，请稍后再试。');
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.textContent = '立即预约';
+                submitBtn.textContent = '预约测试';
             }
         });
     }

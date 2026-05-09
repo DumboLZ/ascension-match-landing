@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #fff;
-    background-color: #0f0f13;
+    color: #f6f2ea;
+    background-color: #0b1016;
     overflow-x: hidden;
 }
 
@@ -51,8 +51,8 @@ ul {
     align-items: center;
     justify-content: center;
     background:
-        radial-gradient(circle at center, rgba(255, 204, 0, 0.12), transparent 32%),
-        linear-gradient(135deg, #0f0f13 0%, #18151d 48%, #0a0a0d 100%);
+        radial-gradient(circle at center, rgba(126, 217, 255, 0.16), transparent 34%),
+        linear-gradient(135deg, #081018 0%, #12283a 46%, #06090d 100%);
     transition: opacity 0.45s ease, visibility 0.45s ease;
 }
 
@@ -74,61 +74,63 @@ ul {
     width: 96px;
     height: 96px;
     object-fit: contain;
-    filter: drop-shadow(0 0 24px rgba(255, 204, 0, 0.28));
+    filter: drop-shadow(0 0 24px rgba(126, 217, 255, 0.24));
 }
 
 .loader-spinner {
     width: 42px;
     height: 42px;
     border: 3px solid rgba(255, 255, 255, 0.18);
-    border-top-color: #ffcc00;
+    border-top-color: #7ed9ff;
     border-radius: 50%;
     animation: spin 0.9s linear infinite;
 }
 
 .loader-panel p {
-    color: #ffcc00;
+    color: #d7f7ff;
     font-weight: bold;
     letter-spacing: 0;
 }
 
 /* 按钮样式 */
 .btn-primary {
-    background-color: #ffcc00;
-    color: #000;
+    background: linear-gradient(135deg, #7ed9ff 0%, #62b8de 100%);
+    color: #06121a;
     padding: 10px 25px;
-    border-radius: 30px;
+    border-radius: 12px;
     font-weight: bold;
-    border: 2px solid #ffcc00;
+    border: 1px solid rgba(214, 244, 255, 0.35);
     cursor: pointer;
     display: inline-block;
     transition: all 0.3s ease;
     font-size: 1rem;
+    box-shadow: 0 10px 24px rgba(44, 94, 122, 0.35);
 }
 
 .btn-primary:hover {
-    background-color: #e6b800;
-    border-color: #e6b800;
+    background: linear-gradient(135deg, #94e2ff 0%, #77c4e8 100%);
+    border-color: rgba(255, 255, 255, 0.45);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+    box-shadow: 0 14px 28px rgba(44, 94, 122, 0.42);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: #fff;
+    background-color: rgba(10, 22, 30, 0.54);
+    color: #ecfbff;
     padding: 10px 25px;
-    border-radius: 30px;
+    border-radius: 12px;
     font-weight: bold;
-    border: 2px solid #fff;
+    border: 1px solid rgba(126, 217, 255, 0.45);
     cursor: pointer;
     display: inline-block;
     transition: all 0.3s ease;
     font-size: 1rem;
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: rgba(126, 217, 255, 0.16);
+    color: #fff;
     transform: translateY(-2px);
 }
 
@@ -143,15 +145,15 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(15, 15, 19, 0.9) 0%, rgba(15, 15, 19, 0) 100%);
+    background: linear-gradient(to bottom, rgba(7, 12, 18, 0.92) 0%, rgba(7, 12, 18, 0) 100%);
     z-index: 1000;
     padding: 20px 0;
     transition: 0.3s;
 }
 
 .navbar.scrolled {
-    background-color: rgba(15, 15, 19, 0.95);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background-color: rgba(7, 12, 18, 0.94);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.35);
     padding: 15px 0;
 }
 
@@ -187,7 +189,7 @@ ul {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #ffcc00;
+    background-color: #7ed9ff;
     transition: width 0.3s;
 }
 
@@ -196,7 +198,7 @@ ul {
 }
 
 .nav-links a:hover {
-    color: #ffcc00;
+    color: #7ed9ff;
 }
 
 .hamburger {
@@ -213,7 +215,7 @@ ul {
     right: -100%;
     width: 100%;
     height: 100%;
-    background-color: #0f0f13;
+    background: linear-gradient(180deg, rgba(9, 16, 24, 0.98) 0%, rgba(5, 8, 12, 0.98) 100%);
     z-index: 2000;
     transition: 0.4s ease-in-out;
     display: flex;
@@ -229,7 +231,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid rgba(126, 217, 255, 0.14);
 }
 
 .mobile-menu-header img {
@@ -278,10 +280,10 @@ ul {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, 
-        rgba(15,15,19,0.2) 0%, 
-        rgba(15,15,19,0.4) 50%, 
-        rgba(15,15,19,0.9) 90%, 
-        rgba(15,15,19,1) 100%);
+        rgba(5,10,16,0.12) 0%, 
+        rgba(10,22,30,0.34) 42%, 
+        rgba(12,22,30,0.78) 86%, 
+        rgba(8,12,16,1) 100%);
     z-index: 1;
     pointer-events: none;
 }
@@ -296,25 +298,26 @@ ul {
 }
 
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: 4.2rem;
     margin-bottom: 10px;
     line-height: 1.1;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.8);
-    font-weight: 800;
+    text-shadow: 0 5px 18px rgba(0,0,0,0.82);
+    font-weight: 700;
+    letter-spacing: 0;
 }
 
 .slogan-sub {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
-    color: #ffcc00;
+    color: #a8e8ff;
     font-weight: 600;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.75);
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 40px;
-    color: #ddd;
+    color: #d6dde2;
     text-shadow: 0 1px 5px rgba(0,0,0,0.8);
     max-width: 600px;
     margin-left: auto;
@@ -322,8 +325,8 @@ ul {
 }
 
 .highlight {
-    color: #ffcc00;
-    text-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+    color: #ffd36e;
+    text-shadow: 0 0 20px rgba(255, 211, 110, 0.48);
 }
 
 .cta-buttons {
@@ -336,7 +339,7 @@ ul {
 .section {
     padding: 100px 0;
     position: relative;
-    background-color: #0f0f13;
+    background: linear-gradient(180deg, rgba(8,12,16,0.92), rgba(10,14,20,0.98));
 }
 
 .section-title {
@@ -344,7 +347,7 @@ ul {
     font-size: 2.5rem;
     margin-bottom: 60px;
     position: relative;
-    color: #fff;
+    color: #f4f1ea;
 }
 
 .section-title::after {
@@ -352,7 +355,7 @@ ul {
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #ffcc00;
+    background: linear-gradient(90deg, #7ed9ff, #ffd36e);
     margin: 15px auto 0;
     border-radius: 2px;
 }
@@ -365,12 +368,12 @@ ul {
 }
 
 .feature-card {
-    background: linear-gradient(145deg, #1a1a20 0%, #15151a 100%);
+    background: linear-gradient(145deg, rgba(22, 34, 43, 0.96) 0%, rgba(12, 18, 24, 0.96) 100%);
     padding: 40px 30px;
-    border-radius: 16px;
+    border-radius: 14px;
     text-align: center;
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid #333;
+    border: 1px solid rgba(126, 217, 255, 0.12);
     position: relative;
     overflow: hidden;
 }
@@ -382,15 +385,15 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(255, 204, 0, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(126, 217, 255, 0.12) 0%, transparent 70%);
     opacity: 0;
     transition: 0.4s;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
-    border-color: #ffcc00;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    border-color: rgba(126, 217, 255, 0.4);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.38);
 }
 
 .feature-card:hover::before {
@@ -400,47 +403,48 @@ ul {
 .icon-box {
     width: 80px;
     height: 80px;
-    background-color: rgba(255, 204, 0, 0.1);
-    border-radius: 50%;
+    background-color: rgba(126, 217, 255, 0.12);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 25px;
     transition: 0.4s;
+    border: 1px solid rgba(126, 217, 255, 0.16);
 }
 
 .feature-card:hover .icon-box {
-    background-color: #ffcc00;
-    transform: rotateY(180deg);
+    background-color: rgba(126, 217, 255, 0.22);
+    transform: translateY(-2px);
 }
 
 .feature-card i {
     font-size: 2.5rem;
-    color: #ffcc00;
+    color: #7ed9ff;
     transition: 0.4s;
 }
 
 .feature-card:hover i {
-    color: #000;
+    color: #fff;
 }
 
 .feature-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
-    color: #fff;
+    color: #f9f5ec;
 }
 
 .feature-card p {
-    color: #aaa;
+    color: #c4ced4;
     font-size: 1rem;
     line-height: 1.7;
 }
 
 /* 页脚 */
 footer {
-    background-color: #0a0a0d;
+    background: linear-gradient(180deg, rgba(8, 12, 16, 0.98), rgba(5, 7, 10, 1));
     padding: 60px 0 30px;
-    border-top: 1px solid #222;
+    border-top: 1px solid rgba(126, 217, 255, 0.12);
     position: relative;
     z-index: 2;
 }
@@ -462,24 +466,32 @@ footer {
 .game-logo {
     height: 50px;
     width: auto;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .studio-logo {
     height: 50px;
     width: auto;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .divider {
-    color: #555;
+    color: #6a8a97;
     font-size: 1.5rem;
 }
 
 .copyright {
     text-align: center;
-    color: #444;
+    color: #6d7c84;
     font-size: 0.9rem;
+}
+
+.copyright a {
+    color: #86adba;
+}
+
+.copyright a:hover {
+    color: #a8e8ff;
 }
 
 /* 弹窗 (Modal) */
@@ -492,7 +504,7 @@ footer {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.85); 
+    background-color: rgba(2,8,12,0.85); 
     backdrop-filter: blur(8px);
     justify-content: center;
     align-items: center;
@@ -500,10 +512,10 @@ footer {
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #1a1a20 0%, #2a2a35 100%);
+    background: linear-gradient(135deg, rgba(18, 30, 38, 0.98) 0%, rgba(9, 14, 18, 0.98) 100%);
     margin: auto;
     padding: 40px;
-    border: 1px solid #444;
+    border: 1px solid rgba(126, 217, 255, 0.16);
     width: 90%;
     max-width: 450px;
     border-radius: 20px;
@@ -514,7 +526,7 @@ footer {
 }
 
 .close-modal {
-    color: #aaa;
+    color: #a5bac5;
     position: absolute;
     top: 15px;
     right: 20px;
@@ -530,13 +542,13 @@ footer {
 
 .modal-header h2 {
     margin-bottom: 10px;
-    color: #ffcc00;
+    color: #a8e8ff;
     font-size: 1.8rem;
 }
 
 .modal-header p {
     margin-bottom: 30px;
-    color: #ccc;
+    color: #c6d2d9;
     font-size: 0.95rem;
 }
 
@@ -549,9 +561,9 @@ footer {
 .subscribe-form input {
     padding: 15px;
     border-radius: 12px;
-    border: 1px solid #444;
+    border: 1px solid rgba(126, 217, 255, 0.2);
     outline: none;
-    background-color: #111;
+    background-color: rgba(8, 14, 18, 0.92);
     color: #fff;
     font-size: 1rem;
     text-align: center;
@@ -559,8 +571,8 @@ footer {
 }
 
 .subscribe-form input:focus {
-    border-color: #ffcc00;
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+    border-color: #7ed9ff;
+    box-shadow: 0 0 10px rgba(126, 217, 255, 0.18);
 }
 
 .subscribe-form button {
