@@ -36,6 +36,36 @@ ul {
     list-style: none;
 }
 
+.fas {
+    font-family: "KaiTi", "STKaiti", "Songti SC", serif;
+    font-style: normal;
+    line-height: 1;
+}
+
+.fa-bars::before {
+    content: '☰';
+}
+
+.fa-times::before {
+    content: '×';
+}
+
+.fa-arrow-left::before {
+    content: '←';
+}
+
+.fa-hourglass-half::before {
+    content: '市';
+}
+
+.fa-chess-king::before {
+    content: '诀';
+}
+
+.fa-cubes::before {
+    content: '斗';
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
