@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const readyTimeout = new Promise((resolve) => setTimeout(resolve, 5000));
     Promise.race([
         Promise.all([
-            loadImage('assets/images/hero-bg.png'),
+            loadImage('assets/images/hero-bg.jpg'),
             loadImage('assets/images/logo.png')
         ]),
         readyTimeout
