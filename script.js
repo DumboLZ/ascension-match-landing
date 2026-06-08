@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // TapTap REP 官网品牌挂件监测链接：拿到 REP 后台生成的链接后替换这里。
+    const TAPTAP_REP_URL = 'https://www.taptap.cn/';
+    document.querySelectorAll('[data-taptap-link]').forEach((link) => {
+        link.href = TAPTAP_REP_URL;
+    });
+
     const loader = document.getElementById('page-loader');
 
     function loadImage(src) {
@@ -76,33 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBtn = document.querySelector('.mobile-subscribe-btn');
     const closeBtn = document.querySelector('.close-modal');
 
-    // 打开弹窗
-    function openModal() {
-        modal.style.display = 'flex';
-        // 如果移动端菜单是打开的，需要关闭
-        if (mobileMenu.classList.contains('active')) {
-            closeMobileMenu();
-        }
-    }
-
-    // 关闭弹窗
-    function closeModal() {
-        modal.style.display = 'none';
-    }
-
-    if (navBtn) navBtn.addEventListener('click', openModal);
-    if (heroBtn) heroBtn.addEventListener('click', openModal);
-    if (mobileBtn) mobileBtn.addEventListener('click', openModal);
-
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-    // 点击外部关闭弹窗
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
     // 移动端菜单逻辑
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -125,6 +104,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // 点击链接关闭菜单
     mobileLinks.forEach(link => {
         link.addEventListener('click', closeMobileMenu);
+    });
+
+    // 打开弹窗
+    function openModal() {
+        if (!modal) {
+            return;
+        }
+
+        modal.style.display = 'flex';
+        if (mobileMenu && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    }
+
+    // 关闭弹窗
+    function closeModal() {
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    if (navBtn) navBtn.addEventListener('click', openModal);
+    if (heroBtn) heroBtn.addEventListener('click', openModal);
+    if (mobileBtn) mobileBtn.addEventListener('click', openModal);
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // 点击外部关闭弹窗
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
     });
 
     // 导航栏滚动效果

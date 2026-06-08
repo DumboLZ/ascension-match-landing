@@ -21,6 +21,7 @@ body.is-loading .navbar,
 body.is-loading .mobile-menu,
 body.is-loading .hero,
 body.is-loading .section,
+body.is-loading .taptap-floating,
 body.is-loading footer,
 body.is-loading .modal {
     visibility: hidden;
@@ -164,6 +165,47 @@ ul {
     transform: translateY(-2px);
 }
 
+.btn-taptap {
+    background: linear-gradient(135deg, #12d6d6 0%, #00b7c8 100%);
+    color: #041416;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(217, 255, 255, 0.45);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 10px 24px rgba(0, 183, 200, 0.28);
+}
+
+.btn-taptap:hover {
+    background: linear-gradient(135deg, #34eeee 0%, #16c6d6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 183, 200, 0.36);
+}
+
+.taptap-mark,
+.taptap-floating-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #041416;
+    color: #22e3e3;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.taptap-mark {
+    width: 42px;
+    height: 28px;
+    border-radius: 7px;
+    font-size: 0.82rem;
+}
+
 .large {
     padding: 15px 40px;
     font-size: 1.2rem;
@@ -229,6 +271,27 @@ ul {
 
 .nav-links a:hover {
     color: #7ed9ff;
+}
+
+.taptap-nav-link {
+    color: #9ff7f5;
+}
+
+.taptap-nav-link::before {
+    content: 'Tap';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 22px;
+    margin-right: 8px;
+    border-radius: 6px;
+    background: rgba(34, 227, 227, 0.16);
+    border: 1px solid rgba(34, 227, 227, 0.28);
+    color: #22e3e3;
+    font-size: 0.68rem;
+    font-weight: 800;
+    vertical-align: middle;
 }
 
 .hamburger {
@@ -363,6 +426,7 @@ ul {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* 通用Section样式 */
@@ -468,6 +532,56 @@ ul {
     color: #c4ced4;
     font-size: 1rem;
     line-height: 1.7;
+}
+
+.taptap-floating {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 900;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 188px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: rgba(6, 18, 22, 0.86);
+    border: 1px solid rgba(34, 227, 227, 0.36);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(12px);
+}
+
+.taptap-floating:hover {
+    transform: translateY(-3px);
+    border-color: rgba(34, 227, 227, 0.68);
+    box-shadow: 0 20px 42px rgba(0, 183, 200, 0.22);
+}
+
+.taptap-floating-mark {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex: 0 0 auto;
+    background: linear-gradient(135deg, #0c2a2d, #041416);
+    border: 1px solid rgba(34, 227, 227, 0.3);
+    font-size: 0.9rem;
+}
+
+.taptap-floating-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.taptap-floating-text strong {
+    color: #efffff;
+    font-size: 1rem;
+}
+
+.taptap-floating-text small {
+    color: #9ff7f5;
+    font-size: 0.78rem;
+    white-space: nowrap;
 }
 
 /* 页脚 */
@@ -676,8 +790,27 @@ footer {
         gap: 15px;
     }
     
-    .btn-primary, .btn-secondary {
+    .btn-primary, .btn-secondary, .btn-taptap {
         width: 100%;
+    }
+
+    .taptap-floating {
+        right: 14px;
+        bottom: 14px;
+        min-width: 0;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .taptap-floating-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        font-size: 0.78rem;
+    }
+
+    .taptap-floating-text {
+        display: none;
     }
     
     .footer-logos {
