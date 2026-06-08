@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // TapTap REP 官网品牌挂件监测链接：拿到 REP 后台生成的链接后替换这里。
-    const TAPTAP_REP_URL = 'https://www.taptap.cn/';
+    const TAPTAP_REP_URL = 'https://www.taptap.cn/app/830285?os=android';
     document.querySelectorAll('[data-taptap-link]').forEach((link) => {
         link.href = TAPTAP_REP_URL;
     });
